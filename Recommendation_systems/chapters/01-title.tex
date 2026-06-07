@@ -1,0 +1,75 @@
+\newcommand{\fixunderline}[3]
+{
+	$\underset{\text{#3}}{\text{\stackengine{0pt}{\hspace{#2}}{\text{#1}}{O}{c}{F}{F}{L}}}$
+}
+
+\begin{titlepage}
+	\newgeometry{pdftex, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+	\fontsize{12pt}{12pt}\selectfont
+	\noindent \begin{minipage}{0.15\textwidth}
+		\includegraphics[width=\linewidth]{img/title_img.png}
+	\end{minipage}
+	\noindent\begin{minipage}{0.9\textwidth}\centering
+		\textbf{Министерство науки и высшего образования Российской Федерации Федеральное государственное автономное образовательное учреждение высшего образования <<Московский государственный технический университет имени Н.Э. Баумана (национальный исследовательский университет)>> (МГТУ им. Н.Э. Баумана)}
+	\end{minipage}
+
+    \vspace{2mm}
+	\noindent\rule{18cm}{3pt}
+	\newline\newline
+	\noindent ФАКУЛЬТЕТ ИУ <<Информатика и системы управления>> \newline\newline
+	\vspace{1mm}
+    \noindent КАФЕДРА ИУ7 <<Программное обеспечение ЭВМ и информационные технологии>>
+    \newline\newline\newline\newline\newline\newline\newline
+	
+	
+	\begin{center}
+		\textbf{\large РАСЧЁТНО-ПОЯСНИТЕЛЬНАЯ ЗАПИСКА \\
+		К ВЫПУСКНОЙ КВАЛИФИКАЦИОННОЙ РАБОТЕ \\ НА ТЕМУ} \\ \large {<<Рекомендательная система рецептов блюд на основе предпочтений и возможностей пользователя>>}
+	\end{center}
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	
+	\begin{table}[h!]
+		\fontsize{12pt}{0.7\baselineskip}\selectfont
+		\centering
+		\begin{signstabular}[0.7]{
+            p{7.25cm}>{\centering\arraybackslash}
+            p{4cm} >{\centering\arraybackslash}p{4cm}
+        }
+			Студент группы ИУ7-81Б &
+            \mbox{\hspace*{4cm}} &
+            Мачильский~Д.~Д. \\ \\ &
+            \scriptsize (Подпись, дата) & \scriptsize (Фамилия~И.О.)
+		\end{signstabular}
+		
+		\vspace{\baselineskip}
+        \vspace{\baselineskip}
+		
+		\begin{signstabular}[0.7]{p{7.25cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{4cm}}
+			Научный руководитель  & \mbox{\hspace*{4cm}} &~~~~~Новик~Н.~В.~~~~~\\ \\
+			& \scriptsize (Подпись, дата) & \scriptsize (Фамилия~И.О.)
+		\end{signstabular}
+
+        \vspace{\baselineskip}
+        \vspace{\baselineskip}
+
+        \begin{signstabular}[0.7]{p{7.25cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{4cm}}
+			Нормоконтролёр  & \mbox{\hspace*{4cm}} &~~~~~~~~~~\\ \\
+			& \scriptsize (Подпись, дата) & \scriptsize (Фамилия~И.О.)
+		\end{signstabular}
+
+        \vspace{\baselineskip}
+        \vspace{\baselineskip}
+		
+		\vspace{\baselineskip}
+	\end{table}
+	
+	\begin{center}
+		\vfill
+		Москва~---~\the\year~г.
+	\end{center}
+	\restoregeometry
+\end{titlepage}

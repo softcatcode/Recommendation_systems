@@ -1,0 +1,159 @@
+\chapter*{ПРИЛОЖЕНИЕ В}
+\addcontentsline{toc}{chapter}{ПРИЛОЖЕНИЕ В}
+\begin{lstlisting}[caption={Определение множества всех слов в наборе рецептов и количеств каждого слова}, label={lst:rvec_1}]
+import pandas as pd
+import ast
+
+def clean(s):
+    result = ''
+    s = s.lower()
+    for c in s:
+        if c >= 'a' and c <= 'z' or c >= '0' and c <= '9':
+            result += c
+    return str(result)
+
+def words(s):
+    i = 0
+    result = []
+    while i < len(s):
+        if not s[i].isalpha():
+            i += 1
+        else:
+            j =  i + 1
+            while j < len(s) and s[j].isalpha():
+                j += 1
+            w = clean(s[i:j])
+            if len(w) > 0:
+                result.append(w)
+            i = j + 1
+    return result
+
+def get_document(raw_recipes, i):
+    name = raw_recipes['name'][i]
+    if type(name) == float:
+        name = ''
+    description = raw_recipes['description'][i]
+    if type(description) == float:
+        description = ''    
+    steps = str(raw_recipes['steps'][i])
+    tags = ast.literal_eval(raw_recipes['tags'][i])
+    ingredients = ast.literal_eval(raw_recipes['ingredients'][i])
+    all_words = words(name)
+    all_words += words(description)
+    for elem in tags:
+        all_words += words(elem)
+    for elem in ingredients:
+        all_words += words(elem)
+    all_words += words(steps)
+    return all_words
+
+BASE_PATH = """/kaggle/input/datasets/shuyangli94/
+food-com-recipes-and-user-interactions/"""
+raw_recipes = pd.read_csv(BASE_PATH + 'RAW_recipes.csv')
+n = len(list(raw_recipes['id']))
+documents = []
+for i in range(n):
+    documents.append(get_document(raw_recipes, i))
+
+word_frequency = dict()
+for doc in documents:
+    for elem in doc:
+        if elem in word_frequency:
+            word_frequency[elem] += 1
+        else:
+            word_frequency[elem] = 1
+count_word_pairs = sorted([(b, a) for a, b in word_frequency.items()])
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Определение набора рассматриваемых слов}, label={lst:rvec_2}]
+candidate_words = dict([(b, a) for a, b in count_word_pairs[85000 : 85000 + 4120]])
+stop_words = {
+    # Грамматический мусор
+    'the', 'and', 'with', 'for', 'from', 'you', 'off', 'this', 'that', 'your',
+    'but', 'not', 'are', 'was', 'were', 'have', 'has', 'had', 'can', 'will',
+    'about', 'all', 'out', 'into', 'then', 'them', 'they', 'their', 'than',
+    
+    # Общие глаголы готовки (они есть везде и не отражают вкус)
+    'cook', 'serve', 'drink', 'make', 'made', 'add', 'added', 'adding', 'use', 
+    'used', 'using', 'take', 'put', 'place', 'bring', 'keep', 'let', 'get', 'comes',
+    
+    # Меры веса и времени (шум для модели предпочтений)
+    'minutes', 'minute', 'hours', 'hour', 'grams', 'gram', 'cups', 'cup', 
+    'tbsp', 'teaspoon', 'tsp', 'ounces', 'ounce', 'inch', 'inches', 'size',
+    'medium', 'small', 'large', 'pieces', 'piece', 'amount', 'weight',
+    
+    # Оценочные слова (люди пишут их в комментариях)
+    'unfortunately', 'favourite', 'favorite', 'meal', 'food', 'tasty', 
+    'calorie', 'great', 'like', 'both', 'good', 'best', 'delicious', 'love',
+    'easy', 'perfect', 'wonderful', 'nice', 'recipe', 'recipes', 'dish', 'friendly'
+    
+    # Другой текстовый шум
+    'doesnt', 'appeared', 'beyond', 'forth', 'unexpected', 'more', 'big',
+    'inspiration', 'previous', 'possibly', 'watcher', 'modifications', 'low', 'less', 'until',
+    'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+    'many', 'few', 'pour', 'spoon', 'fork', 'way', 'brother', 'sister', 'father', 'mother',
+    'supposed', 'none', 'pkg', 'boy', 'girl', 'naan'
+}
+candidate_words = dict([(b, a) for a, b in count_word_pairs[86000:]])
+selected_words = dict()
+for w, count in candidate_words.items():
+    # Убираем слишком короткие слова, стоп-слова и проверяем, что это не число
+    if len(w) > 2 and (w not in stop_words) and not w.isdigit():
+        selected_words[w] = count
+
+# Сортируем от самых частых к менее частым и берем топ-3500
+final_vocabulary = dict(sorted(selected_words.items(), key=lambda item: item[1], reverse=True)[:3500])
+final_vocabulary # Набор рассматриваемых слов.
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Преобразование слов в числовые токены для ускорения работы}, label={lst:rvec_3}]
+ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789"
+ALPH_LEN = len(ALPHABET)
+letter_hash = dict()
+for i, c in enumerate(ALPHABET):
+    letter_hash[c] = i + 1
+
+def token(s):
+    M = 2_147_483_647
+    result = 0
+    for c in s:
+        result = (result * ALPH_LEN + letter_hash[c]) % M
+    return result
+
+token_lists = [[token(w) for w in documents[i]] for i in range(len(documents))]
+token_sets = [set(doc) for doc in token_lists]
+vacabulary_tokens = [token(w) for w in final_vocabulary]
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Получение векторов рецептов}, label={lst:rvec_4}]
+def doc_count(w):
+    result = 0
+    for token_set in token_sets:
+        if w in token_set:
+            result += 1
+    return result
+
+document_count_of = dict()
+for i, t in enumerate(vacabulary_tokens):
+    document_count_of[t] = doc_count(t)
+
+def tf_idf(w, doc):
+    tf = doc.count(w) / (len(doc) + 0.001)
+    idf = np.log(len(documents) / (document_count_of[w] + 0.001))
+    return tf * idf
+
+def documents_to_recipe_vec(documents):
+    n, m = len(documents), len(vacabulary_tokens)
+    recipe_vec = []
+    for i in range(n):
+        recipe_vec.append([])
+        for j in range(m):
+            vec = tf_idf(vacabulary_tokens[j], documents[i])
+            recipe_vec[i].append(vec)
+        if i % 1000 == 0:
+            print("documents_to_recipe_vec: processed recipes =", i + 1)
+    return np.array(recipe_vec)
+ 
+ recipe_vectors = documents_to_recipe_vec(token_lists)
+ recipe_vectors # Результирующие вектора всех рецептов.
+\end{lstlisting}

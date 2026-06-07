@@ -1,0 +1,784 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{arkivanov}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=29f11d157127d398405ced370a874d8c}{%
+           family={Arkivanov},
+           familyi={A\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{29f11d157127d398405ced370a874d8c}
+      \strng{fullhash}{29f11d157127d398405ced370a874d8c}
+      \strng{fullhashraw}{29f11d157127d398405ced370a874d8c}
+      \strng{bibnamehash}{29f11d157127d398405ced370a874d8c}
+      \strng{authorbibnamehash}{29f11d157127d398405ced370a874d8c}
+      \strng{authornamehash}{29f11d157127d398405ced370a874d8c}
+      \strng{authorfullhash}{29f11d157127d398405ced370a874d8c}
+      \strng{authorfullhashraw}{29f11d157127d398405ced370a874d8c}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MVIKotlin : репозиторий GitHub}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/arkivanov/MVIKotlin
+      \endverb
+      \verb{url}
+      \verb https://github.com/arkivanov/MVIKotlin
+      \endverb
+    \endentry
+    \entry{app_tasty}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2999c3a81a7f789b76e7e3fd99e27341}{%
+           family={{BuzzFeed}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Google Play}%
+      }
+      \strng{namehash}{2999c3a81a7f789b76e7e3fd99e27341}
+      \strng{fullhash}{2999c3a81a7f789b76e7e3fd99e27341}
+      \strng{fullhashraw}{2999c3a81a7f789b76e7e3fd99e27341}
+      \strng{bibnamehash}{2999c3a81a7f789b76e7e3fd99e27341}
+      \strng{authorbibnamehash}{2999c3a81a7f789b76e7e3fd99e27341}
+      \strng{authornamehash}{2999c3a81a7f789b76e7e3fd99e27341}
+      \strng{authorfullhash}{2999c3a81a7f789b76e7e3fd99e27341}
+      \strng{authorfullhashraw}{2999c3a81a7f789b76e7e3fd99e27341}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{мобильное приложение для Android}
+      \field{note}{Электронный ресурс}
+      \field{title}{Tasty}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://play.google.com/store/apps/details?id=com.buzzfeed.tasty
+      \endverb
+      \verb{url}
+      \verb https://play.google.com/store/apps/details?id=com.buzzfeed.tasty
+      \endverb
+    \endentry
+    \entry{dietterich2000ensemble}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=8dbbb5753e4c15961794f5a2d0ca370b}{%
+           family={Dietterich},
+           familyi={D\bibinitperiod},
+           given={T.\bibnamedelimi G.},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cagliari, Italy}%
+      }
+      \strng{namehash}{8dbbb5753e4c15961794f5a2d0ca370b}
+      \strng{fullhash}{8dbbb5753e4c15961794f5a2d0ca370b}
+      \strng{fullhashraw}{8dbbb5753e4c15961794f5a2d0ca370b}
+      \strng{bibnamehash}{8dbbb5753e4c15961794f5a2d0ca370b}
+      \strng{authorbibnamehash}{8dbbb5753e4c15961794f5a2d0ca370b}
+      \strng{authornamehash}{8dbbb5753e4c15961794f5a2d0ca370b}
+      \strng{authorfullhash}{8dbbb5753e4c15961794f5a2d0ca370b}
+      \strng{authorfullhashraw}{8dbbb5753e4c15961794f5a2d0ca370b}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Multiple Classifier Systems: First International Workshop, MCS 2000}
+      \field{title}{Ensemble methods in machine learning}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/3-540-45014-9_1
+      \endverb
+      \verb{urlraw}
+      \verb https://web.engr.oregonstate.edu/~tgd/publications/mcs-ensembles.pdf
+      \endverb
+      \verb{url}
+      \verb https://web.engr.oregonstate.edu/~tgd/publications/mcs-ensembles.pdf
+      \endverb
+    \endentry
+    \entry{app_easyrecipes}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=cececee53a7cdab890395644de278c62}{%
+           family={{Dil Studio}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{publisher}{1}{%
+        {Google Play}%
+      }
+      \strng{namehash}{cececee53a7cdab890395644de278c62}
+      \strng{fullhash}{cececee53a7cdab890395644de278c62}
+      \strng{fullhashraw}{cececee53a7cdab890395644de278c62}
+      \strng{bibnamehash}{cececee53a7cdab890395644de278c62}
+      \strng{authorbibnamehash}{cececee53a7cdab890395644de278c62}
+      \strng{authornamehash}{cececee53a7cdab890395644de278c62}
+      \strng{authorfullhash}{cececee53a7cdab890395644de278c62}
+      \strng{authorfullhashraw}{cececee53a7cdab890395644de278c62}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{мобильное приложение для Android}
+      \field{title}{Простые рецепты на каждый день}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://play.google.com/store/apps/details?id=com.dilstudio.easyrecipes
+      \endverb
+      \verb{url}
+      \verb https://play.google.com/store/apps/details?id=com.dilstudio.easyrecipes
+      \endverb
+    \endentry
+    \entry{ghazawneh2013dual}{inbook}{}{}
+      \name{author}{2}{}{%
+        {{hash=7a72a8cfc9fca9237b7aaed27fc01b46}{%
+           family={Ghazawneh},
+           familyi={G\bibinitperiod},
+           given={Ahmad},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7e75377b05d5d70bf875340f2da582af}{%
+           family={Henfridsson},
+           familyi={H\bibinitperiod},
+           given={Ola},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Palgrave Macmillan}%
+      }
+      \strng{namehash}{92aaf2e5cd9b3eb96ea87dc9fb2907ec}
+      \strng{fullhash}{92aaf2e5cd9b3eb96ea87dc9fb2907ec}
+      \strng{fullhashraw}{92aaf2e5cd9b3eb96ea87dc9fb2907ec}
+      \strng{bibnamehash}{92aaf2e5cd9b3eb96ea87dc9fb2907ec}
+      \strng{authorbibnamehash}{92aaf2e5cd9b3eb96ea87dc9fb2907ec}
+      \strng{authornamehash}{92aaf2e5cd9b3eb96ea87dc9fb2907ec}
+      \strng{authorfullhash}{92aaf2e5cd9b3eb96ea87dc9fb2907ec}
+      \strng{authorfullhashraw}{92aaf2e5cd9b3eb96ea87dc9fb2907ec}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Platform Power and Policy in the Mobile App Economy}
+      \field{title}{The Dual Dominance of the Android Business Ecosystem}
+      \field{year}{2013}
+      \field{pages}{89\bibrangedash 108}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1057/9781137316745_5
+      \endverb
+    \endentry
+    \entry{android_developers}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Android Developers : официальная документация}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/
+      \endverb
+    \endentry
+    \entry{dagger}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dagger Developer Guide : руководство по внедрению зависимостей}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dagger.dev/dev-guide/
+      \endverb
+      \verb{url}
+      \verb https://dagger.dev/dev-guide/
+      \endverb
+    \endentry
+    \entry{firebase}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Firebase}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{платформа для разработки мобильных и веб-приложений}
+      \field{title}{Firebase Documentation}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://firebase.google.com/docs
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/docs
+      \endverb
+    \endentry
+    \entry{room}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{4}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Room Persistence Library}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/training/data-storage/room
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/training/data-storage/room
+      \endverb
+    \endentry
+    \entry{recipe_dataset}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eff733dfd45373817c2dafdae01a94f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shuyang},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eff733dfd45373817c2dafdae01a94f}
+      \strng{fullhash}{3eff733dfd45373817c2dafdae01a94f}
+      \strng{fullhashraw}{3eff733dfd45373817c2dafdae01a94f}
+      \strng{bibnamehash}{3eff733dfd45373817c2dafdae01a94f}
+      \strng{authorbibnamehash}{3eff733dfd45373817c2dafdae01a94f}
+      \strng{authornamehash}{3eff733dfd45373817c2dafdae01a94f}
+      \strng{authorfullhash}{3eff733dfd45373817c2dafdae01a94f}
+      \strng{authorfullhashraw}{3eff733dfd45373817c2dafdae01a94f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Kaggle dataset}
+      \field{title}{Food.com Recipes and User Interactions}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions
+      \endverb
+    \endentry
+    \entry{robert_martin}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=6f41df64eb0dc4855be70172368604c2}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhashraw}{6f41df64eb0dc4855be70172368604c2}
+      \strng{bibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorbibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhashraw}{6f41df64eb0dc4855be70172368604c2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0134494166}
+      \field{title}{Clean Architecture: A Craftsman's Guide to Software Structure and Design}
+      \field{year}{2017}
+      \field{pages}{432}
+      \range{pages}{1}
+    \endentry
+    \entry{pazzani2007content}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=322c0d05bf49c6888d62bf2d57ec465e}{%
+           family={Pazzani},
+           familyi={P\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8e2715b58f26d42675ca26b0290bf7be}{%
+           family={Billsus},
+           familyi={B\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=95d906910e817c9df6fdd7d6f79a09a1}{%
+           family={Brusilovsky},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2bfb2fe6a8ac0c4a492cc26bf0ed3c50}{%
+           family={Kobsa},
+           familyi={K\bibinitperiod},
+           given={Alfred},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d6f39264fac99623136df11c39951df7}{%
+           family={Nejdl},
+           familyi={N\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{857efa9bc3bdfc791e155690ca08c342}
+      \strng{fullhash}{857efa9bc3bdfc791e155690ca08c342}
+      \strng{fullhashraw}{857efa9bc3bdfc791e155690ca08c342}
+      \strng{bibnamehash}{857efa9bc3bdfc791e155690ca08c342}
+      \strng{authorbibnamehash}{857efa9bc3bdfc791e155690ca08c342}
+      \strng{authornamehash}{857efa9bc3bdfc791e155690ca08c342}
+      \strng{authorfullhash}{857efa9bc3bdfc791e155690ca08c342}
+      \strng{authorfullhashraw}{857efa9bc3bdfc791e155690ca08c342}
+      \strng{editorbibnamehash}{362dc3b66f0efeace02306992c5aa4a9}
+      \strng{editornamehash}{362dc3b66f0efeace02306992c5aa4a9}
+      \strng{editorfullhash}{362dc3b66f0efeace02306992c5aa4a9}
+      \strng{editorfullhashraw}{362dc3b66f0efeace02306992c5aa4a9}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Adaptive Web: Methods and Strategies of Web Personalization}
+      \field{title}{Content-Based Recommendation Systems}
+      \field{year}{2007}
+      \field{pages}{325\bibrangedash 341}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/978-3-540-72079-9_10
+      \endverb
+    \endentry
+    \entry{app_cookbook}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1e908e1833a9a050970ee0b44a58885d}{%
+           family={{Riatech}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{publisher}{1}{%
+        {Google Play}%
+      }
+      \strng{namehash}{1e908e1833a9a050970ee0b44a58885d}
+      \strng{fullhash}{1e908e1833a9a050970ee0b44a58885d}
+      \strng{fullhashraw}{1e908e1833a9a050970ee0b44a58885d}
+      \strng{bibnamehash}{1e908e1833a9a050970ee0b44a58885d}
+      \strng{authorbibnamehash}{1e908e1833a9a050970ee0b44a58885d}
+      \strng{authornamehash}{1e908e1833a9a050970ee0b44a58885d}
+      \strng{authorfullhash}{1e908e1833a9a050970ee0b44a58885d}
+      \strng{authorfullhashraw}{1e908e1833a9a050970ee0b44a58885d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{мобильное приложение для Android}
+      \field{title}{Поваренная книга рецептов}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://play.google.com/store/apps/details?id=com.riatech.cookbook
+      \endverb
+      \verb{url}
+      \verb https://play.google.com/store/apps/details?id=com.riatech.cookbook
+      \endverb
+    \endentry
+    \entry{salton1975vector}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5299281e19f9b62eb7b3db2c8c4089fd}{%
+           family={Salton},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d2a1c5a5506119e30ddf6ef38b9dd45f}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4c314198b2353d4d67329144b9a78e83}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={C.-S.},
+           giveni={C\bibinithyphendelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{511fc3e581934a46ced0f2356664e676}
+      \strng{fullhash}{511fc3e581934a46ced0f2356664e676}
+      \strng{fullhashraw}{511fc3e581934a46ced0f2356664e676}
+      \strng{bibnamehash}{511fc3e581934a46ced0f2356664e676}
+      \strng{authorbibnamehash}{511fc3e581934a46ced0f2356664e676}
+      \strng{authornamehash}{511fc3e581934a46ced0f2356664e676}
+      \strng{authorfullhash}{511fc3e581934a46ced0f2356664e676}
+      \strng{authorfullhashraw}{511fc3e581934a46ced0f2356664e676}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{11}
+      \field{title}{A vector space model for automatic indexing}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{18}
+      \field{year}{1975}
+      \field{urldateera}{ce}
+      \field{pages}{613\bibrangedash 620}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/361219.361220
+      \endverb
+      \verb{urlraw}
+      \verb https://openlib.org/home/krichel/courses/lis618/readings/salton75.pdf
+      \endverb
+      \verb{url}
+      \verb https://openlib.org/home/krichel/courses/lis618/readings/salton75.pdf
+      \endverb
+    \endentry
+    \entry{sharma2022scaling}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=976a433a2295c1844e67191db17ba6b4}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{976a433a2295c1844e67191db17ba6b4}
+      \strng{fullhash}{976a433a2295c1844e67191db17ba6b4}
+      \strng{fullhashraw}{976a433a2295c1844e67191db17ba6b4}
+      \strng{bibnamehash}{976a433a2295c1844e67191db17ba6b4}
+      \strng{authorbibnamehash}{976a433a2295c1844e67191db17ba6b4}
+      \strng{authornamehash}{976a433a2295c1844e67191db17ba6b4}
+      \strng{authorfullhash}{976a433a2295c1844e67191db17ba6b4}
+      \strng{authorfullhashraw}{976a433a2295c1844e67191db17ba6b4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal for Global Academic and Scientific Research}
+      \field{number}{1}
+      \field{title}{A Study on Data Scaling Methods for Machine Learning}
+      \field{volume}{1}
+      \field{year}{2022}
+      \field{pages}{12\bibrangedash 20}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.55938/ijgasr.v1i1.4
+      \endverb
+    \endentry
+    \entry{app_foodru}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=94b2ef0f65f104a53f1c82ed05d51b0a}{%
+           family={{X5 Group}},
+           familyi={X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Google Play}%
+      }
+      \strng{namehash}{94b2ef0f65f104a53f1c82ed05d51b0a}
+      \strng{fullhash}{94b2ef0f65f104a53f1c82ed05d51b0a}
+      \strng{fullhashraw}{94b2ef0f65f104a53f1c82ed05d51b0a}
+      \strng{bibnamehash}{94b2ef0f65f104a53f1c82ed05d51b0a}
+      \strng{authorbibnamehash}{94b2ef0f65f104a53f1c82ed05d51b0a}
+      \strng{authornamehash}{94b2ef0f65f104a53f1c82ed05d51b0a}
+      \strng{authorfullhash}{94b2ef0f65f104a53f1c82ed05d51b0a}
+      \strng{authorfullhashraw}{94b2ef0f65f104a53f1c82ed05d51b0a}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Food.ru : программа для ЭВМ}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://play.google.com/store/apps/details?id=ru.x5.foodru
+      \endverb
+      \verb{url}
+      \verb https://play.google.com/store/apps/details?id=ru.x5.foodru
+      \endverb
+    \endentry
+    \entry{aggarwal}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=1848182b1ed75e5340d3782939c965c7}{%
+           family={Аггарвал},
+           familyi={А\bibinitperiod},
+           given={Ч.\bibnamedelimi К.},
+           giveni={Ч\bibinitperiod\bibinitdelim К\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {ДМК Пресс}%
+      }
+      \strng{namehash}{1848182b1ed75e5340d3782939c965c7}
+      \strng{fullhash}{1848182b1ed75e5340d3782939c965c7}
+      \strng{fullhashraw}{1848182b1ed75e5340d3782939c965c7}
+      \strng{bibnamehash}{1848182b1ed75e5340d3782939c965c7}
+      \strng{authorbibnamehash}{1848182b1ed75e5340d3782939c965c7}
+      \strng{authornamehash}{1848182b1ed75e5340d3782939c965c7}
+      \strng{authorfullhash}{1848182b1ed75e5340d3782939c965c7}
+      \strng{authorfullhashraw}{1848182b1ed75e5340d3782939c965c7}
+      \field{sortinit}{А}
+      \field{sortinithash}{9db8541854f3671fde760253476fbbdb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Рекомендательные системы}
+      \field{year}{2020}
+      \field{pages}{386}
+      \range{pages}{1}
+    \endentry
+    \entry{zholobova2022nutrition}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=338a5e214cb877fbe90af587ad7a298b}{%
+           family={Жолобова},
+           familyi={Ж\bibinitperiod},
+           given={А.\bibnamedelimi В.},
+           giveni={А\bibinitperiod\bibinitdelim В\bibinitperiod}}}%
+        {{hash=4d95c69d0917b9df4ca93d08eafce391}{%
+           family={Бакешин},
+           familyi={Б\bibinitperiod},
+           given={К.\bibnamedelimi П.},
+           giveni={К\bibinitperiod\bibinitdelim П\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{d2f70eef3036325a12b94ed983541715}
+      \strng{fullhash}{d2f70eef3036325a12b94ed983541715}
+      \strng{fullhashraw}{d2f70eef3036325a12b94ed983541715}
+      \strng{bibnamehash}{d2f70eef3036325a12b94ed983541715}
+      \strng{authorbibnamehash}{d2f70eef3036325a12b94ed983541715}
+      \strng{authornamehash}{d2f70eef3036325a12b94ed983541715}
+      \strng{authorfullhash}{d2f70eef3036325a12b94ed983541715}
+      \strng{authorfullhashraw}{d2f70eef3036325a12b94ed983541715}
+      \field{sortinit}{Ж}
+      \field{sortinithash}{e0112b37c31ba0ed0b1bd2e7ba383297}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Пищевая промышленность}
+      \field{number}{5}
+      \field{title}{Система здорового питания}
+      \field{year}{2022}
+      \field{pages}{42\bibrangedash 48}
+      \range{pages}{7}
+    \endentry
+    \entry{app_simple_recipes}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{publisher}{1}{%
+        {Google Play}%
+      }
+      \field{sortinit}{П}
+      \field{sortinithash}{b60c3989b0a91e15e157f5b4997c35c7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{мобильное приложение для Android}
+      \field{title}{Простые рецепты}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://play.google.com/store/apps/details?id=dev.as.recipes
+      \endverb
+      \verb{url}
+      \verb https://play.google.com/store/apps/details?id=dev.as.recipes
+      \endverb
+    \endentry
+    \entry{segaran}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=600228c60ebb9000a09193cf73bdf131}{%
+           family={Сегаран},
+           familyi={С\bibinitperiod},
+           given={Т.},
+           giveni={Т\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Санкт-Петербург}%
+      }
+      \list{publisher}{1}{%
+        {Символ-Плюс}%
+      }
+      \strng{namehash}{600228c60ebb9000a09193cf73bdf131}
+      \strng{fullhash}{600228c60ebb9000a09193cf73bdf131}
+      \strng{fullhashraw}{600228c60ebb9000a09193cf73bdf131}
+      \strng{bibnamehash}{600228c60ebb9000a09193cf73bdf131}
+      \strng{authorbibnamehash}{600228c60ebb9000a09193cf73bdf131}
+      \strng{authornamehash}{600228c60ebb9000a09193cf73bdf131}
+      \strng{authorfullhash}{600228c60ebb9000a09193cf73bdf131}
+      \strng{authorfullhashraw}{600228c60ebb9000a09193cf73bdf131}
+      \field{sortinit}{С}
+      \field{sortinithash}{e581ee5e052c6c8e9beb0cf2da905808}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-5-93286-128-2}
+      \field{title}{Программируем коллективный разум}
+      \field{year}{2008}
+      \field{pages}{384}
+      \range{pages}{1}
+    \endentry
+    \entry{yandex_matrix}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=dfd3cd9e74f91b51d6f8dff3006ee828}{%
+           family={{Яндекс Образование}},
+           familyi={Я\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{dfd3cd9e74f91b51d6f8dff3006ee828}
+      \strng{fullhash}{dfd3cd9e74f91b51d6f8dff3006ee828}
+      \strng{fullhashraw}{dfd3cd9e74f91b51d6f8dff3006ee828}
+      \strng{bibnamehash}{dfd3cd9e74f91b51d6f8dff3006ee828}
+      \strng{authorbibnamehash}{dfd3cd9e74f91b51d6f8dff3006ee828}
+      \strng{authornamehash}{dfd3cd9e74f91b51d6f8dff3006ee828}
+      \strng{authorfullhash}{dfd3cd9e74f91b51d6f8dff3006ee828}
+      \strng{authorfullhashraw}{dfd3cd9e74f91b51d6f8dff3006ee828}
+      \field{sortinit}{Я}
+      \field{sortinithash}{4d045f53699e0133749592603a9059cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Электронный ресурс}
+      \field{title}{Рекомендации на основе матричных разложений}
+      \field{urlday}{11}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://education.yandex.ru/handbook/ml/article/rekomendacii-na-osnove-matrichnyh-razlozhenij
+      \endverb
+      \verb{url}
+      \verb https://education.yandex.ru/handbook/ml/article/rekomendacii-na-osnove-matrichnyh-razlozhenij
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

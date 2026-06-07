@@ -1,0 +1,21 @@
+\renewcommand{\contentsname}{СОДЕРЖАНИЕ}
+\makeatletter
+\renewcommand{\@dotsep}{4.5}
+\newcommand{\addchaptertocentry}[1]{
+  \addcontentsline{toc}{chapter}{
+    \protect\numberline{}#1
+  }
+}
+\makeatother
+
+% Сначала жестко говорим, что ТЕКУЩАЯ (или следующая создаваемая) страница — это 2
+\clearpage % Завершаем предыдущую страницу (титульник)
+\setcounter{page}{2} % Задаем номер 2 для оглавления
+
+\begingroup
+\let\LARGE\normalsize
+\let\Large\normalsize
+\let\large\normalsize
+\pretolerance=10000 % Запрет переносов слов, о котором говорили ранее
+\tableofcontents
+\endgroup
