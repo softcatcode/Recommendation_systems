@@ -22,9 +22,10 @@ TEX_FILES = \
 	$(ROOT)/chapters/08-research.tex \
 	$(ROOT)/chapters/09-conclusion.tex \
 	$(ROOT)/chapters/10-sources.tex \
-	$(ROOT)/chapters/11-slides.tex \
+	$(ROOT)/chapters/11-vectorize.tex \
+	$(ROOT)/chapters/13-slides.tex \
 	$(ROOT)/chapters/12-app.tex \
-	$(ROOT)/chapters/13-vectorize.tex \
+	$(ROOT)/chapters/13-slides.tex \
 	$(ROOT)/img/methods.png \
 	$(ROOT)/img/uml.pdf \
 	$(ROOT)/img/mvi.pdf \

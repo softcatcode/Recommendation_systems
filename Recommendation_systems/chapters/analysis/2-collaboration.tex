@@ -5,7 +5,7 @@
 
 \subsection{Простая коллаборативная фильтрация}
 Коллаборативная фильтрация позволяет предсказать оценку, которую даст выбранный пользователь какому-либо рецепту, на основе оценок других пользователей~\cite{segaran}.
-Оценка пользователя представляет собой число в пределах $[a, b]$.
+Оценка пользователя представляет собой число из определённого отрезка.
 
 Пусть:
 \begin{itemize}
@@ -19,17 +19,18 @@
 Для этого выполняются следующие действия:
 \begin{itemize}
     \item находится пересечение $R$ множеств $R'$ и $R_i$;
-    \item собираются векторы оценок $a, b$, где $a_k, b_k$ -- оценки пользователей $u', u$ соответственно для рецепта $R_k, k \in \overline{1, |R|}$;
+    \item собираются векторы оценок $a, b$, где $a_k, b_k$ -- оценки пользователей $u', u$ соответственно для рецепта $R_k, k \in \overline{1, |R|}$.
 \end{itemize}
 Таким образом, $\gamma = F(a, b)$.
 В качестве метрики $F$ обычно выступает Евклидово расстояние или коэффициент корреляции Пирсона~\cite{segaran}.
-Евклидово расстояние вычисляется по формуле~\cite{segaran}:
+Евклидово расстояние вычисляется по формуле~\eqref{eq:dist}:
 \begin{equation}
     F(a, b) = \sqrt{\sum\limits_{i=1}^{n} (a_i - b_i)^2},
     \label{eq:dist}
 \end{equation}
-а коэффициент корреляции Пирсона -- по формуле~\cite{segaran}:
+а коэффициент корреляции Пирсона -- по формуле~\eqref{eq:pirson}:
 \begin{equation}
+\label{eq:pirson}
     F(a, b) = \dfrac{\sum\limits_{i=1}^{n} a_i b_i - \dfrac{\left(\sum\limits_{i=1}^{n} a_i\right) \left(\sum\limits_{i=1}^{n} b_i\right)}{n}}{\sqrt{\left(\sum\limits_{i=1}^{n} a_i^2 - \dfrac{\left(\sum\limits_{i=1}^{n} a_i\right)^2}{n}\right) \left(\sum\limits_{i=1}^{n} b_i^2 - \dfrac{\left(\sum\limits_{i=1}^{n} b_i\right)^2}{n}\right)}}
 \end{equation}
 где $n = |a| = |b|$.
@@ -41,8 +42,9 @@
     \item $\beta_{k,i}$ -- оценка рецепта $k$ пользователем $i$, $k \in \overline{1, M}, i \in I_k$;
     \item $\alpha_k$ -- оценка пользователя $u'$ для рецепта c номером $k$.
 \end{itemize}
-Тогда $\alpha_k$ рассчитывается по формуле~\cite{segaran}:
+Тогда $\alpha_k$ рассчитывается по формуле~\eqref{eq:pred_score_simple_col}:
 \begin{equation}
+\label{eq:pred_score_simple_col}
     \alpha_k = \frac{\sum\limits_{i \in I_k} (\gamma_i\beta_{k,i})}{\sum\limits_{i \in I_k} (\gamma_i)}.
 \end{equation}
 Таким образом на основе оценок других пользователей предсказывается оценка выбранного пользователя.
@@ -67,22 +69,28 @@
     \item $R$ -- множество пар $(u, i)$ индексов пользователя и объекта, таких что оценка пользователя $u$ для объекта $i$ известна;
     \item $r$ -- матрица предпочтений, где $r_{u,i}$ оценка, которую пользователь $u$ выставил объекту $i$, $u \in \overline{1, N}, i \in \overline{1, M}$.
 \end{itemize}
-Оценка пользователем $u$ объекта $i$ вычисляется по формуле~\cite{yandex_matrix}:
+Оценка пользователем $u$ объекта $i$ вычисляется по формуле~\eqref{eq:matrix_method_res}:
 \begin{equation}
+\label{eq:matrix_method_res}
     \hat{r}_{u,i} = x_u^Ty_i.
 \end{equation}
 Задача заключается в нахождении скрытых признаков.
-Следовательно, необходимо минимизировать функцию потерь, в качестве которой выступает~\cite{yandex_matrix}:
+Следовательно, необходимо минимизировать функцию потерь, в качестве которой выступает~\eqref{eq:loss_func}:
 \begin{equation}
+\label{eq:loss_func}
     L(X, Y) = \sum_{(u, i) \in R}{(r_{ui} - \hat{r}_{u,i})^2}.
 \end{equation}
 Таким образом задача рекомендаций сведена к задачи оптимизации.
 Тогда следует применить $L2$-регуляризацию, чтобы не произошло переобучение модели~\cite{yandex_matrix}.
-После применения $L2$-регуляризации, функция потерь принимает вид:
+После применения $L2$-регуляризации, функция потерь принимает вид~\eqref{eq:loss}:
 \begin{equation}
     L(X, Y) = \sum_{(u, i) \in R}{(r_{ui} - \hat{r}_{u,i})^2} + \lambda \sum_{u = 1}^{N}{(||x_u||^2C_u)} + \lambda \sum_{i = 1}^{M}{(||y_i||^2C_i)},
     \label{eq:loss}
-\end{equation} где $\lambda > 0$, а $C=(C_1,\dots,C_N)$ -- вектор констант.
+\end{equation} где:
+\begin{itemize}
+	\item $\lambda > 0$;
+	\item $C=(C_1,\dots,C_N)$ -- вектор констант.
+\end{itemize}
 
 Алгоритм минимизации функции потерь~\eqref{eq:loss} состоит из следующих шагов~\cite{yandex_matrix}:
 \begin{itemize}
@@ -95,26 +103,27 @@
 \end{itemize}
 
 Далее рассмотрен шаг алгоритма вычисления строки $x_u$ матрицы $X$.
-Необходимо найти такое значение вектора $x_u$, для которого значение функции потерь~\eqref{eq:loss} минимально.
-Тогда значение $x_u$ может быть представлено как~\cite{yandex_matrix}:
+Необходимо найти такое значение вектора $x_u$, для которого значение функции потерь~\eqref{eq:loss} минимально~\cite{yandex_matrix}.
+Тогда значение $x_u$ может быть представлено как~\eqref{eq:argmin_step_1}:
 \begin{equation}
     \underset{x_u}{argmin} \sum_{(u, i) \in R}{(r_{ui} - x_u^Ty_i)^2} + \lambda \sum_{u = 1}^{N}{(||x_u||^2C_u)} + \lambda \sum_{i = 1}^{N}{(||y_i||^2C_i)},
     \label{eq:argmin_step_1}
 \end{equation}
 где функция $\underset{x_u}{argmin}$ обозначает такое $x_u$, при котором значение выражения минимально.
-Выражение~\eqref{eq:argmin_step_1} упрощается~\cite{yandex_matrix}:
+Выражение~\eqref{eq:argmin_step_1} упрощается до~\eqref{eq:argmin_step_2}:
 \begin{equation}
     \underset{x_u}{argmin} -2x_u^T\sum_{(u, i) \in R}{(r_{ui}y_i)} + x_u^T(\sum_{(u, i) \in R}{(y_iy_i^T) + \lambda C_uI})x_u,
     \label{eq:argmin_step_2}
 \end{equation}
 где $I$ -- единичная матрица.
-Далее применяется следующее соотношение~\cite{yandex_matrix}:
+Далее применяется соотношение~\eqref{eq:th1}:
 \begin{equation}
     \underset{x_u}{argmin} -2x_u^TB + x_u^TAx_u = A^{-1}B.
     \label{eq:th1}
 \end{equation}
-Из~\eqref{eq:argmin_step_2}--\eqref{eq:th1} следует, что
+Из~\eqref{eq:argmin_step_2}--\eqref{eq:th1} следует~\eqref{eq:matr_conclusion}:
 \begin{equation}
+\label{eq:matr_conclusion}
     x_u = (\sum_{i: (u, i) \in R}{(y_iy_i^T)}+ \lambda C_uI)^{-1}\sum_{i: (u, i) \in R}{(r_{u,i}y_i)}.
 \end{equation}
 
@@ -131,12 +140,12 @@
 Создаётся матрица $X$, строка $i$ которой является конкатенацией векторов $p_i$ и $r_i$.
 Аналогично для объектов, не оценённых $u'$, строится матрица $X'$.
 Необходимо на основании данных $X, y$ найти вектор $y'$, где $y'_i$ -- оценка для объекта, представляемого вектором $X'_i$.
-Для этого разрабатывается модель $M$, в результате обучения которой на данных $(X, y)$ вектор $y'$ вычисляется по формуле $y' \approx M(X')$~\cite{segaran}.
+Для этого разрабатывается модель $M$, в результате обучения которой на данных $(X, y)$ вектор $y'$ вычисляется по формуле $y' \approx M(X')$.
 В качестве такой модели выступает одна из следующих~\cite{segaran}:
 \begin{itemize}
     \item решающее дерево;
     \item линейная регрессия;
-    \item $K$ ближайших соседей;
+    \item $k$ ближайших соседей;
     \item логистическая регрессия;
     \item нейросеть.
 \end{itemize}

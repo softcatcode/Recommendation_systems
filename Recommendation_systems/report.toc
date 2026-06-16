@@ -1,52 +1,54 @@
 \babel@toc {russian}{}\relax 
-\contentsline {chapter}{РЕФЕРАТ}{3}{chapter*.2}%
-\contentsline {chapter}{ВВЕДЕНИЕ}{5}{chapter*.3}%
-\contentsline {chapter}{\numberline {1}Аналитический раздел}{7}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Анализ предметной области}{7}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Понятие рекомендательных алгоритмов}{7}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Формализация задачи рекомендательных\\систем}{7}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Методы коллаборативной фильтрации}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Простая коллаборативная фильтрация}{8}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Матричные разложения}{10}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Гибридные рекомендательные методы}{12}{subsection.1.2.3}%
-\contentsline {section}{\numberline {1.3}Контентная фильтрация}{14}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Параметры рецепта}{14}{subsection.1.3.1}%
-\contentsline {subsubsection}{Преобразование текста в вектор}{14}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Классификация Байеса}{16}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Регрессия}{17}{subsection.1.3.3}%
-\contentsline {subsubsection}{Линейная регрессия}{17}{equation.1.18}%
-\contentsline {subsection}{\numberline {1.3.4}Регуляризация линейной регрессии}{18}{subsection.1.3.4}%
-\contentsline {subsubsection}{Нормализация регрессии}{19}{equation.1.22}%
-\contentsline {subsubsection}{Другие модели регрессии}{20}{equation.1.25}%
-\contentsline {subsubsection}{Метод уменьшения размерности}{20}{table.caption.4}%
-\contentsline {subsection}{\numberline {1.3.5}Метод ближайших соседей}{21}{subsection.1.3.5}%
-\contentsline {subsection}{\numberline {1.3.6}Ядерная регрессия}{22}{subsection.1.3.6}%
-\contentsline {subsection}{\numberline {1.3.7}Кластеризация}{23}{subsection.1.3.7}%
-\contentsline {subsection}{\numberline {1.3.8}Комбинации моделей}{23}{subsection.1.3.8}%
-\contentsline {section}{\numberline {1.4}Обзор существующих решений}{24}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Сравнение методов рекомендаций рецептов}{25}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Учёт возможностей пользователя}{28}{section.1.6}%
-\contentsline {chapter}{\numberline {2}Конструкторский раздел}{30}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Определение прецедентов}{30}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Выделение сущностей}{32}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Выбор архитектурных шаблонов проектирования}{33}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Проектирование алгоритма рекомендаций}{34}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Технологический раздел}{42}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Подготовка данных}{42}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Выбор средств разработки}{42}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Реализация рекомендательной системы}{44}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Реализация получения векторов рецептов}{45}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Примеры работы программы}{45}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Исследовательский раздел}{51}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Проведение измерений точности}{51}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Регрессионная модель}{52}{subsection.4.1.1}%
-\contentsline {subsubsection}{Подбор параметров модели}{52}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Метод $k$ ближайших соседей}{53}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Графики метрик моделей}{55}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Вычисление метрик}{55}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Анализ результатов}{57}{subsection.4.2.2}%
-\contentsline {chapter}{ЗАКЛЮЧЕНИЕ}{60}{chapter*.35}%
-\contentsline {chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}{61}{chapter*.36}%
-\contentsline {chapter}{ПРИЛОЖЕНИЕ А}{64}{chapter*.37}%
-\contentsline {chapter}{ПРИЛОЖЕНИЕ Б}{65}{chapter*.38}%
-\contentsline {chapter}{ПРИЛОЖЕНИЕ В}{66}{chapter*.39}%
+\contentsline {chapter}{РЕФЕРАТ}{5}{chapter*.2}%
+\contentsline {chapter}{ВВЕДЕНИЕ}{8}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Аналитический раздел}{10}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Анализ предметной области}{10}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Понятие рекомендательных алгоритмов}{10}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Формализация задачи рекомендательных\\систем}{10}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Методы коллаборативной фильтрации}{11}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Простая коллаборативная фильтрация}{11}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Матричные разложения}{13}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Гибридные рекомендательные методы}{15}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Контентная фильтрация}{17}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Параметры рецепта}{17}{subsection.1.3.1}%
+\contentsline {subsubsection}{Преобразование текста в вектор}{17}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Классификация Байеса}{19}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Регрессия}{20}{subsection.1.3.3}%
+\contentsline {subsubsection}{Линейная регрессия}{21}{equation.1.18}%
+\contentsline {subsection}{\numberline {1.3.4}Регуляризация линейной регрессии}{21}{subsection.1.3.4}%
+\contentsline {subsubsection}{Нормализация регрессии}{22}{equation.1.22}%
+\contentsline {subsubsection}{Другие модели регрессии}{23}{equation.1.25}%
+\contentsline {subsubsection}{Метод уменьшения размерности}{23}{table.caption.4}%
+\contentsline {subsection}{\numberline {1.3.5}Метод ближайших соседей}{24}{subsection.1.3.5}%
+\contentsline {subsection}{\numberline {1.3.6}Ядерная регрессия}{25}{subsection.1.3.6}%
+\contentsline {subsection}{\numberline {1.3.7}Кластеризация}{26}{subsection.1.3.7}%
+\contentsline {subsection}{\numberline {1.3.8}Комбинации моделей}{27}{subsection.1.3.8}%
+\contentsline {section}{\numberline {1.4}Обзор существующих решений}{27}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Сравнение методов рекомендаций рецептов}{28}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Учёт возможностей пользователя}{31}{section.1.6}%
+\contentsline {section}{Выводы}{32}{equation.1.30}%
+\contentsline {chapter}{\numberline {2}Конструкторский раздел}{33}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Определение прецедентов}{33}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Выделение сущностей}{35}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Выбор архитектурных шаблонов проектирования}{36}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Проектирование алгоритма рекомендаций}{37}{section.2.4}%
+\contentsline {section}{Выводы}{37}{figure.caption.21}%
+\contentsline {chapter}{\numberline {3}Технологический раздел}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Подготовка данных}{45}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Выбор средств разработки}{45}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Реализация рекомендательной системы}{47}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Реализация получения векторов рецептов}{48}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Примеры работы программы}{48}{section.3.5}%
+\contentsline {section}{Выводы}{53}{figure.caption.29}%
+\contentsline {chapter}{\numberline {4}Исследовательский раздел}{54}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Проведение измерений точности}{54}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Регрессионная модель}{55}{subsection.4.1.1}%
+\contentsline {subsubsection}{Подбор параметров модели}{55}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Метод ближайших соседей}{56}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Графики метрик моделей}{58}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Вычисление метрик}{58}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Анализ результатов}{60}{subsection.4.2.2}%
+\contentsline {section}{Выводы}{61}{subsection.4.2.2}%
+\contentsline {chapter}{ЗАКЛЮЧЕНИЕ}{62}{chapter*.35}%
+\contentsline {chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}{63}{chapter*.36}%
+\contentsline {chapter}{ПРИЛОЖЕНИЕ А}{66}{chapter*.37}%

@@ -1,8 +1,3 @@
-\newcommand{\fixunderline}[3]
-{
-	$\underset{\text{#3}}{\text{\stackengine{0pt}{\hspace{#2}}{\text{#1}}{O}{c}{F}{F}{L}}}$
-}
-
 \begin{titlepage}
 	\newgeometry{pdftex, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
 	\fontsize{12pt}{12pt}\selectfont
@@ -40,25 +35,26 @@
             p{4cm} >{\centering\arraybackslash}p{4cm}
         }
 			Студент группы ИУ7-81Б &
-            \mbox{\hspace*{4cm}} &
-            Мачильский~Д.~Д. \\ \\ &
-            \scriptsize (Подпись, дата) & \scriptsize (Фамилия~И.О.)
+            \signaturefield &
+            \signfield{Мачильский~Д.~Д.} \\
 		\end{signstabular}
 		
 		\vspace{\baselineskip}
         \vspace{\baselineskip}
 		
 		\begin{signstabular}[0.7]{p{7.25cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{4cm}}
-			Научный руководитель  & \mbox{\hspace*{4cm}} &~~~~~Новик~Н.~В.~~~~~\\ \\
-			& \scriptsize (Подпись, дата) & \scriptsize (Фамилия~И.О.)
+			Научный руководитель  & 
+            \signaturefield & 
+            \signfield{Новик~Н.~В.} \\
 		\end{signstabular}
 
         \vspace{\baselineskip}
         \vspace{\baselineskip}
 
         \begin{signstabular}[0.7]{p{7.25cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{4cm}}
-			Нормоконтролёр  & \mbox{\hspace*{4cm}} &~~~~~~~~~~\\ \\
-			& \scriptsize (Подпись, дата) & \scriptsize (Фамилия~И.О.)
+			Нормоконтролёр  & 
+            \signaturefield & 
+            \emptysignfield \\
 		\end{signstabular}
 
         \vspace{\baselineskip}
@@ -69,7 +65,7 @@
 	
 	\begin{center}
 		\vfill
-		Москва~---~\the\year~г.
+		\the\year~г.
 	\end{center}
 	\restoregeometry
 \end{titlepage}

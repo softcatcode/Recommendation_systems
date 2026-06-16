@@ -3,75 +3,71 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 
-% === BIBLATEX + GOST ===
+
+
 \usepackage[
     backend=biber,
-    style=numeric,          % Ссылки в тексте: [1], [2]
-    sorting=nty,            % Сортировка списка: по алфавиту (фамилия-заголовок-год)
+    style=gost-numeric,
+    sorting=none,
+    language=russian,
     url=true,
     doi=true,
-    language=russian,
     date=year,
     maxnames=3,
     minnames=1,
-    giveninits=true,
-    isbn=false,
-    clearlang=true
+    giveninits=true
 ]{biblatex}
 
 \addbibresource{references.bib}
 
-% === Русские строки ===
+% Русские строки
 \DefineBibliographyStrings{russian}{
   andothers = {и др.},
   urlseen   = {дата обращения\addcolon},
-  retrieved = {дата обращения\addcolon},
-  from      = {из},
-  in        = {в},
-  volume    = {т\adddot},
-  number    = {\textnumero},
-  pages     = {с\adddot},
-  page      = {с\adddot},
 }
 
-% === Формат имён: Фамилия И. О. ===
+% Формат имён
 \DeclareNameAlias{sortname}{family-given}
 \DeclareNameAlias{default}{family-given}
 
-% === Разделители: точка с пробелом ===
-\renewcommand*{\newunitpunct}{\addperiod\space}
-\renewcommand*{\finentrypunct}{\addperiod}
+% Убираем лишние поля
+\AtEveryBibitem{
+  \clearfield{isbn}
+  \clearfield{issn}
+  \clearfield{abstract}
+  \clearfield{series}
+}
 
-% === Висячий отступ ===
-\setlength{\bibhang}{1.25cm}
-
-% === Убираем номера из списка, но оставляем в тексте ===
-\DeclareFieldFormat{labelnumberwidth}{}
-\renewbibmacro*{labelnumberwidth}{}
-\defbibenvironment{bibliography}
-  {\list
-     {}
-     {\setlength{\leftmargin}{\bibhang}
-      \setlength{\itemindent}{-\leftmargin}
-      \setlength{\itemsep}{\bibitemsep}
-      \setlength{\parsep}{\bibparsep}}}
-  {\endlist}
-  {\item}
-
-% === Кастомный заголовок (чтобы не ломался с titlesec) ===
+% Кастомный заголовок
 \defbibheading{gostbib}[\bibname]{%
   \chapter*{#1}%
   \addcontentsline{toc}{chapter}{#1}%
   \markboth{#1}{}%
 }
+% === ИСПРАВЛЕНИЕ ПЕРЕНОСОВ В БИБЛИОГРАФИИ ===
 
-% === Кастомный заголовок, который НЕ ломается с titlesec + tocloft ===
-% packages.tex
-\defbibheading{gostbib}[\bibname]{%
-  \chapter*{#1}%                    % Сначала создаём заголовок и переход на новую страницу
-  \addcontentsline{toc}{chapter}{#1}% ← Теперь запишется ПРАВИЛЬНЫЙ номер
-  \markboth{#1}{}%
+% 1. Делаем шрифт URL таким же, как основной текст (чтобы переносы работали корректно)
+\urlstyle{same}
+
+% 2. Разрешаем переносы ВНУТРИ URL по символам: /, -, _, ., :, ~, ?
+% Это предотвращает вылезание ссылок за правое поле
+\makeatletter
+\def\UrlBreaks{
+  \do\/\do-\do_\do.\do:\do\@\do\\\do\/\do\%\do\~\do\?\do\&\do\=\do\#\do\+\do\*\do\,\do\;\do\|\do\<\do\>\do\^\do\'\do\"\do\`\do\!\do\$\do\[\do\]\do\{\do\}\do\(\do\)
 }
+\makeatother
+% === Формат ссылок: Режим доступа: URL: ... ===
+\DeclareFieldFormat[online,misc]{url}{%
+  Режим доступа: URL\addcolon\space\url{#1}%
+}
+\DeclareFieldFormat[inproceedings,misc]{url}{%
+  Режим доступа: URL\addcolon\space\url{#1}%
+}
+
+
+% Разделители
+\renewcommand*{\newunitpunct}{\addperiod\space}
+\renewcommand*{\finentrypunct}{\addperiod}
 
 \renewcommand*{\mkbibnamefamily}[1]{#1}
 
@@ -117,27 +113,26 @@
 
 \usepackage{titlesec}
 
-% === ГЛАВЫ С НОМЕРОМ ===
 \titleformat{\chapter}[block]
   {\hspace{\parindent}\normalsize\bfseries}   % Шрифт номера
-  {\thechapter.}                              % Номер с точкой
+  {\thechapter}
   {1em}                                       % Отступ после номера
   {\normalsize\bfseries\raggedright}          % Шрифт заголовка (ТЕПЕРЬ 14pt)
 
 % === ГЛАВЫ БЕЗ НОМЕРА (Введение, Заключение, Список литературы и т.д.) ===
 \titleformat{name=\chapter,numberless}[block]
-  {\hspace{\parindent}\normalsize\bfseries}
+  {\centering\normalsize\bfseries}
   {}
   {0pt}
-  {\normalsize\bfseries\centering}
+  {}
 
 % === РАЗДЕЛЫ ===
 \titleformat{\section}[block]
-  {\hspace{\parindent}\normalsize\bfseries}{\thesection.}{1em}{\normalsize\bfseries\raggedright}
+  {\hspace{\parindent}\normalsize\bfseries}{\thesection}{1em}{\normalsize\bfseries\raggedright}
 
 % === ПОДРАЗДЕЛЫ ===
 \titleformat{\subsection}[block]
-  {\hspace{\parindent}\normalsize\bfseries}{\thesubsection.}{1em}{\normalsize\bfseries\raggedright}
+  {\hspace{\parindent}\normalsize\bfseries}{\thesubsection}{1em}{\normalsize\bfseries\raggedright}
 
 % === ВЕРТИКАЛЬНЫЕ ОТСТУПЫ ===
 \titlespacing*{\chapter}{12.5mm}{0pt}{10pt}
@@ -227,7 +222,7 @@
 
 % === ФОРМАТ НОМЕРА ГЛАВЫ ===
 \renewcommand{\cftchappresnum}{}    % Убираем слово "Глава"
-\renewcommand{\cftchapaftersnum}{.} % Точка после номера
+\renewcommand{\cftchapaftersnum}{} % Точка после номера
 
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \usepackage{csquotes}
@@ -237,6 +232,8 @@
 \renewcommand\theadfont{\bfseries\small}
 
 \usepackage{listings}
+\usepackage{xcolor}
+
 \lstset{
     language=Python,
     inputencoding=utf8,
@@ -246,42 +243,60 @@
     commentstyle=\color{gray}\itshape,
     stringstyle=\color{orange},
     numbers=left,
-    numberstyle=\tiny\color{white},
+    numberstyle=\tiny\color{black},
     stepnumber=1,
     numbersep=5pt,
-    backgroundcolor=\color{gray!10},
+    % === РАМКА И ПЕРЕНОСЫ ===
+    frame=single,               % Полная рамка со всех сторон
+    framerule=0.4pt,            % Толщина линии рамки
+    framesep=3pt,               % Отступ текста от рамки
+    rulecolor=\color{black},    % Цвет рамки
+    breaklines=true,            % Автоматический перенос длинных строк
+    breakatwhitespace=true,     % Перенос только по пробелам
+    % === ПОДПИСИ ===
+    captionpos=t,               % Подпись СВЕРХУ (ГОСТ)
+    % === ПРОЧЕЕ ===
     showspaces=false,
     showstringspaces=false,
     showtabs=false,
     tabsize=4,
-    frame=single,
-    breaklines=true,
-    breakatwhitespace=true,
-    captionpos=b,
     literate=
-		{а}{{\selectfont\char224}}1 {б}{{\selectfont\char225}}1 {в}{{\selectfont\char226}}1
-		{г}{{\selectfont\char227}}1 {д}{{\selectfont\char228}}1 {е}{{\selectfont\char229}}1
-		 {ё}{{\selectfont\char184}}1 {ж}{{\selectfont\char230}}1 {з}{{\selectfont\char231}}1
-		{и}{{\selectfont\char232}}1 {й}{{\selectfont\char233}}1 {к}{{\selectfont\char234}}1
-		{л}{{\selectfont\char235}}1 {м}{{\selectfont\char236}}1 {н}{{\selectfont\char237}}1
-		{о}{{\selectfont\char238}}1 {п}{{\selectfont\char239}}1 {р}{{\selectfont\char240}}1
-		{с}{{\selectfont\char241}}1 {т}{{\selectfont\char242}}1 {у}{{\selectfont\char243}}1
-		{ф}{{\selectfont\char244}}1 {х}{{\selectfont\char245}}1 {ц}{{\selectfont\char246}}1
-		{ч}{{\selectfont\char247}}1 {ш}{{\selectfont\char248}}1 {щ}{{\selectfont\char249}}1
-		{ъ}{{\selectfont\char250}}1 {ы}{{\selectfont\char251}}1 {ь}{{\selectfont\char252}}1
-		{э}{{\selectfont\char253}}1 {ю}{{\selectfont\char254}}1 {я}{{\selectfont\char255}}1
-		{А}{{\selectfont\char192}}1 {Б}{{\selectfont\char193}}1 {В}{{\selectfont\char194}}1
-		{Г}{{\selectfont\char195}}1 {Д}{{\selectfont\char196}}1 {Е}{{\selectfont\char197}}1
-		{Ё}{{\selectfont\char168}}1 {Ж}{{\selectfont\char198}}1 {З}{{\selectfont\char199}}1
-		{И}{{\selectfont\char200}}1 {Й}{{\selectfont\char201}}1 {К}{{\selectfont\char202}}1
-		{Л}{{\selectfont\char203}}1 {М}{{\selectfont\char204}}1 {Н}{{\selectfont\char205}}1
-		{О}{{\selectfont\char206}}1 {П}{{\selectfont\char207}}1 {Р}{{\selectfont\char208}}1
-		{С}{{\selectfont\char209}}1 {Т}{{\selectfont\char210}}1 {У}{{\selectfont\char211}}1
-		{Ф}{{\selectfont\char212}}1 {Х}{{\selectfont\char213}}1 {Ц}{{\selectfont\char214}}1
-		{Ч}{{\selectfont\char215}}1 {Ш}{{\selectfont\char216}}1 {Щ}{{\selectfont\char217}}1
-		{Ъ}{{\selectfont\char218}}1 {Ы}{{\selectfont\char219}}1 {Ь}{{\selectfont\char220}}1
-		{Э}{{\selectfont\char221}}1 {Ю}{{\selectfont\char222}}1 {Я}{{\selectfont\char223}}1,
+        {а}{{\selectfont\char224}}1 {б}{{\selectfont\char225}}1 {в}{{\selectfont\char226}}1
+        {г}{{\selectfont\char227}}1 {д}{{\selectfont\char228}}1 {е}{{\selectfont\char229}}1
+        {ё}{{\selectfont\char184}}1 {ж}{{\selectfont\char230}}1 {з}{{\selectfont\char231}}1
+        {и}{{\selectfont\char232}}1 {й}{{\selectfont\char233}}1 {к}{{\selectfont\char234}}1
+        {л}{{\selectfont\char235}}1 {м}{{\selectfont\char236}}1 {н}{{\selectfont\char237}}1
+        {о}{{\selectfont\char238}}1 {п}{{\selectfont\char239}}1 {р}{{\selectfont\char240}}1
+        {с}{{\selectfont\char241}}1 {т}{{\selectfont\char242}}1 {у}{{\selectfont\char243}}1
+        {ф}{{\selectfont\char244}}1 {х}{{\selectfont\char245}}1 {ц}{{\selectfont\char246}}1
+        {ч}{{\selectfont\char247}}1 {ш}{{\selectfont\char248}}1 {щ}{{\selectfont\char249}}1
+        {ъ}{{\selectfont\char250}}1 {ы}{{\selectfont\char251}}1 {ь}{{\selectfont\char252}}1
+        {э}{{\selectfont\char253}}1 {ю}{{\selectfont\char254}}1 {я}{{\selectfont\char255}}1
+        {А}{{\selectfont\char192}}1 {Б}{{\selectfont\char193}}1 {В}{{\selectfont\char194}}1
+        {Г}{{\selectfont\char195}}1 {Д}{{\selectfont\char196}}1 {Е}{{\selectfont\char197}}1
+        {Ё}{{\selectfont\char168}}1 {Ж}{{\selectfont\char198}}1 {З}{{\selectfont\char199}}1
+        {И}{{\selectfont\char200}}1 {Й}{{\selectfont\char201}}1 {К}{{\selectfont\char202}}1
+        {Л}{{\selectfont\char203}}1 {М}{{\selectfont\char204}}1 {Н}{{\selectfont\char205}}1
+        {О}{{\selectfont\char206}}1 {П}{{\selectfont\char207}}1 {Р}{{\selectfont\char208}}1
+        {С}{{\selectfont\char209}}1 {Т}{{\selectfont\char210}}1 {У}{{\selectfont\char211}}1
+        {Ф}{{\selectfont\char212}}1 {Х}{{\selectfont\char213}}1 {Ц}{{\selectfont\char214}}1
+        {Ч}{{\selectfont\char215}}1 {Ш}{{\selectfont\char216}}1 {Щ}{{\selectfont\char217}}1
+        {Ъ}{{\selectfont\char218}}1 {Ы}{{\selectfont\char219}}1 {Ь}{{\selectfont\char220}}1
+        {Э}{{\selectfont\char221}}1 {Ю}{{\selectfont\char222}}1 {Я}{{\selectfont\char223}}1,
 }
+\makeatletter
+\newcommand{\lstcontinuation}{%
+  \addtocounter{lstlisting}{-1}% Откатываем счётчик, чтобы номер остался A.1
+  \renewcommand{\lstlistingname}{Продолжение листинга}% Меняем префикс
+}
+\newcommand{\lstendcontinuation}{%
+  \renewcommand{\lstlistingname}{Листинг}% Возвращаем слово "Листинг"
+  \lstset{labelsep=endash}% Возвращаем тире для следующих листингов
+}
+\makeatother
+\usepackage{caption}
+\captionsetup[lstlisting]{font=normalsize, labelfont=bf, labelsep=endash}
+
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{icomma}
 \usepackage{upgreek}
@@ -292,4 +307,37 @@
         height=0.85\textheight,
         keepaspectratio
     ]{#1}
+}
+\newcommand{\fixunderline}[3]
+{
+	$\underset{\text{#3}}{\text{\stackengine{0pt}{\hspace{#2}}{\text{#1}}{O}{c}{F}{F}{L}}}$
+}
+
+% Команда для поля с подписью/датой ПОД подчёркиванием
+% Добавлен \vphantom для выравнивания по высоте с полем фамилии
+\newcommand{\signaturefield}{%
+	\renewcommand{\arraystretch}{1}%
+	\begin{tabular}[t]{@{}c@{}}%
+		\vphantom{Фамилия~И.~О.}\\[-0.2em]%
+		\underline{\hspace{4cm}}\\[-0.2em]%
+		\scriptsize (Подпись, дата)%
+	\end{tabular}%
+}
+
+% Команда для поля с фамилией НАД подчёркиванием
+\newcommand{\signfield}[1]{%
+	\renewcommand{\arraystretch}{1}%
+	\begin{tabular}[t]{@{}c@{}}%
+		#1\\[-0.2em]%
+		\underline{\hspace{4cm}}%
+	\end{tabular}%
+}
+
+% Команда для пустого поля (только линия)
+\newcommand{\emptysignfield}{%
+	\renewcommand{\arraystretch}{1}%
+	\begin{tabular}[t]{@{}c@{}}%
+		\vphantom{Фамилия~И.~О.}\\[-0.2em]%
+		\underline{\hspace{4cm}}%
+	\end{tabular}%
 }

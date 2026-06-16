@@ -1,0 +1,38 @@
+candidate_words = dict([(b, a) for a, b in count_word_pairs[85000 : 85000 + 4120]])
+stop_words = {
+    # Грамматический мусор
+    'the', 'and', 'with', 'for', 'from', 'you', 'off', 'this', 'that', 'your',
+    'but', 'not', 'are', 'was', 'were', 'have', 'has', 'had', 'can', 'will',
+    'about', 'all', 'out', 'into', 'then', 'them', 'they', 'their', 'than',
+
+    # Общие глаголы готовки (они есть везде и не отражают вкус)
+    'cook', 'serve', 'drink', 'make', 'made', 'add', 'added', 'adding', 'use',
+    'used', 'using', 'take', 'put', 'place', 'bring', 'keep', 'let', 'get', 'comes',
+
+    # Меры веса и времени (шум для модели предпочтений)
+    'minutes', 'minute', 'hours', 'hour', 'grams', 'gram', 'cups', 'cup',
+    'tbsp', 'teaspoon', 'tsp', 'ounces', 'ounce', 'inch', 'inches', 'size',
+    'medium', 'small', 'large', 'pieces', 'piece', 'amount', 'weight',
+
+    # Оценочные слова (люди пишут их в комментариях)
+    'unfortunately', 'favourite', 'favorite', 'meal', 'food', 'tasty',
+    'calorie', 'great', 'like', 'both', 'good', 'best', 'delicious', 'love',
+    'easy', 'perfect', 'wonderful', 'nice', 'recipe', 'recipes', 'dish', 'friendly'
+
+    # Другой текстовый шум
+    'doesnt', 'appeared', 'beyond', 'forth', 'unexpected', 'more', 'big',
+    'inspiration', 'previous', 'possibly', 'watcher', 'modifications', 'low', 'less', 'until',
+    'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+    'many', 'few', 'pour', 'spoon', 'fork', 'way', 'brother', 'sister', 'father', 'mother',
+    'supposed', 'none', 'pkg', 'boy', 'girl', 'naan'
+}
+candidate_words = dict([(b, a) for a, b in count_word_pairs[86000:]])
+selected_words = dict()
+for w, count in candidate_words.items():
+    # Убираем слишком короткие слова, стоп-слова и проверяем, что это не число
+    if len(w) > 2 and (w not in stop_words) and not w.isdigit():
+        selected_words[w] = count
+
+# Сортируем от самых частых к менее частым и берем топ-3500
+final_vocabulary = dict(sorted(selected_words.items(), key=lambda item: item[1], reverse=True)[:3500])
+final_vocabulary # Набор рассматриваемых слов.
